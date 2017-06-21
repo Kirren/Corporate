@@ -1,0 +1,31 @@
+@mixin phone{
+  @include media-breakpoint-up(xs) { @content; }
+}
+@mixin phone-only{
+  @include media-breakpoint-only(xs) { @content; }
+}
+
+@mixin tablet{
+  @include media-breakpoint-up(sm) { @content; }
+}
+@mixin tablet-only{
+  @include media-breakpoint-only(sm) { @content; }
+}
+
+@mixin desktop{
+  @include media-breakpoint-up(md) { @content; }
+}
+
+@mixin largeDesktop{
+  @include media-breakpoint-up(lg) { @content; }
+}
+
+@mixin extraLargeDesktop{
+  @include media-breakpoint-up(xl) { @content; }
+}
+
+
+@mixin no-side-padding{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

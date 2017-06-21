@@ -1,0 +1,33 @@
+.team {
+  @include tablet { height: 650px; }
+  background: url("../img/team-background.png") no-repeat center;
+  background-size: cover;
+  color: white;
+  img {
+    @include size(75px);
+    color: $light-grey;
+  }
+  .name {
+    color: white;
+    font: {
+      size: 18px;
+      weight: 400;
+    };
+  }
+  .position {
+    color: $accent-color;
+    font: {
+      size: 16px;
+      weight: 400;
+    }
+  }
+  p {
+    color: white;
+    line-height: 26px;
+    font: {
+      size: 16px;
+      weight: 400;
+      style: italic;
+    }
+  }
+}

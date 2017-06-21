@@ -1,0 +1,45 @@
+body {
+  * {
+    font-family: 'Exo', sans-serif;
+    color: $black;
+  }
+  section {
+
+  }
+
+  h1 {
+    font-weight: 100;
+  }
+  h2 {
+    line-height: 50px;
+    font: {
+      size: 40px;
+      weight: 400;
+    };
+    span { color: $accent-color; }
+  }
+  h4 {
+    line-height: 50px;
+    font: {
+      size: 22px;
+      weight: 400;
+    };
+  }
+  h5 {
+    font: {
+      size: 16px;
+      weight: 400;
+    };
+    color: $accent-color;
+    text-transform: uppercase;
+  }
+
+  .covered-right {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 300px 407px;
+    border-color: transparent transparent $accent-color transparent;
+    overflow: hidden;
+  }
+}

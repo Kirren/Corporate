@@ -1,0 +1,15 @@
+header{
+  @include desktop { height: 815px; }
+  background: url("../img/header-background.png") no-repeat center;
+  background-size: cover;
+  .play-video {
+    border-radius: 50%;
+    @include size(50px);
+    background-color: #8286a4;
+  }
+  .try-now {
+    background-color: $red;
+    text-transform: uppercase;
+    //color: white;
+  }
+}

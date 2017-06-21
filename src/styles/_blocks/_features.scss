@@ -1,0 +1,5 @@
+.features {
+  @include desktop { height: 680px; }
+  background: url("../img/section-background.png") no-repeat center;
+  background-size: cover;
+}

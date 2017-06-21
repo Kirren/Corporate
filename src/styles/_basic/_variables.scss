@@ -1,0 +1,24 @@
+// Typography
+
+$font-size-base:    16px;
+$line-height-base:  26px;
+
+// Colors
+
+$background-pink:  #fb8686;
+$accent-color:  #ff6d6d;
+
+$dark-accent:   #23527c;
+$bg-grey:       #f6f5f3;
+$light-grey:     #dadada;
+$grey:          #a9a9a9;
+$black:         #282828;
+$dark-blue:      #323969;
+
+$transparent-mask: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0.2)), to(rgba(0,0,0,1)));
+$shadow:            -1px 10px 40px -4px rgba(201,201,201,1);
+
+// Movement
+
+$slide:         all .3s ease;
+$slidefast:     all .1s ease-in-out;
