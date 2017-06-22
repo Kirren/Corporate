@@ -59,21 +59,44 @@ var path = {
 // Bower and FontAwesome configuration
 
 var config = {
-    sassPath:         './src/styles',
-    bowerPath:        './bower_components',
-    fontAwesomeCssPath:'/font-awesome/css/font-awesome.css',
-    fontAwesomeFontsPath:'/font-awesome/fonts/*.*'
+    sassPath:               './src/styles',
+    bowerPath:              './bower_components',
+    fontAwesomeFontsPath:   '/font-awesome/fonts/*.*',
+    fontAwesomeCssPath:     '/font-awesome/css/font-awesome.min.css',
+    tetherCssPath:          '/tether/dist/css/tether.min.css',
+    bootstrapCssPath:       '/bootstrap/dist/css/bootstrap.min.css',
+    tetherJsPath:           '/tether/dist/js/tether.min.js',
+    jqueryPath:             '/jquery/dist/jquery.min.js',
+    bootstrapJsPath:        '/bootstrap/dist/js/bootstrap.min.js'
 };
 
-gulp.task('icons', function() {
+gulp.task('jsLibraries', function() {
+    return gulp.src([
+        config.bowerPath + config.tetherJsPath,
+        config.bowerPath + config.jqueryPath,
+        config.bowerPath + config.bootstrapJsPath
+    ]).pipe(gulp.dest('./public/js'));
+});
+gulp.task('cssLibraries', function() {
+    return gulp.src([
+        config.bowerPath + config.tetherCssPath,
+        config.bowerPath + config.bootstrapCssPath
+    ]).pipe(gulp.dest('./public/css'));
+});
+
+gulp.task('addIcons', function() {
     return gulp.src(config.bowerPath + config.fontAwesomeCssPath)
         .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('fa', function() {
+gulp.task('addFaFonts', function() {
     return gulp.src(config.bowerPath + config.fontAwesomeFontsPath)
         .pipe(gulp.dest('./public/fonts'));
 });
+
+gulp.task('addLibraries', gulp.series(
+    ['jsLibraries', 'cssLibraries', 'addIcons', 'addFaFonts']
+));
 
 
 // Lazy tasks declaration and connection
@@ -126,7 +149,7 @@ lazyRequireTask('fonts', './tasks/fonts', {
 
 
 gulp.task('build', gulp.series(
-    ['images', 'icons', 'fa', 'fonts', 'scripts', /*'assets',*/ 'html', 'styles']
+    ['images', 'fonts', 'addLibraries', 'scripts', 'html', 'styles']
 ));
 
 gulp.task('watch', gulp.parallel(
