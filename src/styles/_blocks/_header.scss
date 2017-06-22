@@ -1,15 +1,44 @@
 header{
-  @include desktop { height: 815px; }
-  background: url("../img/header-background.png") no-repeat center;
+  @include tablet {
+    height: 585px;
+    padding: 8em;
+  }
+  @include desktop {
+    height: 600px;
+    padding: 12em 8em;
+  }
+  @include largeDesktop {
+    height: 815px;
+    padding: 12em 8em;
+  }
+  background: url("../img/header-background.png") no-repeat center center;
   background-size: cover;
+  h1 { margin-bottom: 60px; }
+  p {
+    color: lightgrey;
+    text-shadow: 1px 1px grey;
+    font: {
+      size: 15px;
+      weight: 100;
+    };
+    &:hover { background-color: white; }
+  }
   .play-video {
     border-radius: 50%;
     @include size(50px);
     background-color: #8286a4;
+    margin-bottom: 40px;
+    i {
+      font-size: 30px;
+      line-height: 1;
+      width: 15px;
+    }
+    &:hover {
+      background-color: lighten(#8286a4, 10%);
+    }
   }
-  .try-now {
-    background-color: $red;
-    text-transform: uppercase;
-    //color: white;
+  .accent-button {
+    margin-bottom: 18px;
+    padding: 1em 3em;
   }
 }

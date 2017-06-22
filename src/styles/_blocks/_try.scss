@@ -1,0 +1,27 @@
+.trial {
+  background-color: $dark-blue;
+  h2 { color: white; }
+  input{
+    background-color: lighten($dark-blue, 15%);
+    border: none;
+    &::placeholder {
+      text-transform: uppercase;
+      color: white;
+      opacity: 0.5;
+      font-weight: 100;
+    }
+    &:hover, &:focus {
+      background-color: lighten($dark-blue, 25%);
+      border: inset 1px solid $accent-color;
+    }
+  }
+  .form-control {
+    @include phone-only { margin-bottom: 10px; }
+    @include tablet { width: 22%; }
+  }
+  .signing {
+    font-weight: 100;
+    color: white;
+    a { color: $accent-color; }
+  }
+}

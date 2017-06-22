@@ -1,9 +1,8 @@
 // Third Party
 
-//= ../../bower_components/tether/dist/js/tether.min.js
-//= ../../bower_components/jquery/dist/jquery.min.js
-//= ../../bower_components/bootstrap/dist/js/bootstrap.min.js
-
+//=../../bower_components/tether/dist/js/tether.js
+//=../../bower_components/jquery/dist/jquery.js
+//=../../bower_components/bootstrap/dist/js/bootstrap.js"
 
 // Custom JS
 
@@ -44,5 +43,13 @@ $( document ).ready( function(){
                 }
             }
         });
+
+    $("#try-button").hover(function(){
+        $("[data-toggle='tooltip']").tooltip('show');
+    });
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 } );
 

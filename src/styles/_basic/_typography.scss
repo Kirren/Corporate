@@ -1,4 +1,5 @@
 body {
+  overflow-x: hidden;
   * {
     font-family: 'Exo', sans-serif;
     color: $black;
@@ -8,7 +9,14 @@ body {
   }
 
   h1 {
-    font-weight: 100;
+    font: {
+      size: 40px;
+      weight: 100;
+    }
+    @include largeDesktop {
+      font-size: 60px;
+      line-height: 1.25;
+    }
   }
   h2 {
     line-height: 50px;
@@ -19,7 +27,7 @@ body {
     span { color: $accent-color; }
   }
   h4 {
-    line-height: 50px;
+    line-height: 35px;
     font: {
       size: 22px;
       weight: 400;
@@ -34,6 +42,15 @@ body {
     text-transform: uppercase;
   }
 
+  .headings-wrapper {
+    margin-bottom: 3em;
+  }
+
+  p {
+    opacity: 0.66;
+    font-weight: 400;
+  }
+
   .covered-right {
     width: 0;
     height: 0;
@@ -41,5 +58,23 @@ body {
     border-width: 0 0 300px 407px;
     border-color: transparent transparent $accent-color transparent;
     overflow: hidden;
+  }
+
+  .accent-button {
+    color: white;
+    background-color: $accent-color;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 100;
+    border: none;
+    &:hover {
+      background-color: lighten($accent-color, 10%);
+    }
+  }
+
+  .tooltip{
+    background-color: transparent;
+    color: white;
+    @extend .icon-arrow;
   }
 }

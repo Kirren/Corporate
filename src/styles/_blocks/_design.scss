@@ -1,25 +1,29 @@
 .design {
   @include desktop { height: 725px; }
   .img-container {
+    height: 500px;
     position: relative;
     overflow: hidden;
-    img {
-      height: auto;
-    }
+    background: url("../img/user.png") no-repeat center;
+    background-size: cover;
     .overlay {
+      @include phone-only { display: none; }
       position: absolute;
       bottom: 0;
       top: 50%;
       left: 50%;
       right: 0;
       background-color: transparent;
-      overflow: hidden;
       width: 0;
       height: 100%;
       transition: .5s ease;
     }
     &:hover {
-      .overlay { transform: translate(-237px, -250px); }
+      .overlay {
+        @include tablet { transform: translate(-150px, -250px); }
+        @include desktop { transform: translate(-200px, -250px); }
+        @include desktop { transform: translate(-170px, -250px); }
+      }
     }
   }
 }

@@ -1,13 +1,12 @@
 section.trial
   div.container.text-center
-    h5 new features
-    h2 Over 1000 designers are using ...
-
-    form.form-inline
+    div.headings-wrapper
+      h5 new features
+      h2 Over 1000 designers are using ...
+    form.form-inline.mb-5.justify-content-around.flex-md-nowrap
       input.form-control(type="text", placeholder="full name")
       input.form-control(type="email", placeholder="your email")
       input.form-control(type="password", placeholder="password")
-      button.form-control(type="submit", data-toggle="tooltip", data-placement="top", title="30 days free trial for all." data-animation) try now
-
-    p By Signing up you agree to our
+      button.form-control.accent-button#try-button(type="submit", data-toggle="tooltip", data-placement="top", title="30 days free trial for all." data-animation) try now
+    p.signing By Signing up you agree to our
       a(href="#")  terms & Services.

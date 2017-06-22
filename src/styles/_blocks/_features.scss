@@ -1,5 +1,19 @@
 .features {
+  @include tablet-only { padding: 9em 0; }
   @include desktop { height: 680px; }
-  background: url("../img/section-background.png") no-repeat center;
-  background-size: cover;
+  @include phone-only {
+    background: url("../img/pen-holder.png") no-repeat 340% -5%,
+                url("../img/сoffee-сup.png") no-repeat -20% 113%,
+                $bg-grey;
+  }
+  background: url("../img/pen-holder.png") no-repeat 0% -5%,
+              url("../img/earphones.png") no-repeat 100% -15%,
+              url("../img/сoffee-сup.png") no-repeat 100% 130%,
+              $bg-grey;
+  .feature {
+    padding: 1em;
+    &:hover {
+      background-color: white;
+    }
+  }
 }

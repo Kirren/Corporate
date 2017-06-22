@@ -1,0 +1,34 @@
+footer {
+  @include tablet { padding-bottom: 0; }
+  @include phone-only { text-align: center; }
+  background: url("../img/rectangle-background.png") no-repeat 35em -25em fixed, transparent;
+  a {
+    line-height: 30px;
+    opacity: 0.66;
+    font: {
+      size: 14px;
+    };
+    &:hover, &:focus{ color: $accent-color; }
+  }
+
+  form {
+    .form-control {
+      @extend .mx-0;
+      height: 45px;
+    }
+    .form-group {
+    }
+    .accent-button {
+      width: 45px;
+      padding: 11px;
+    }
+  }
+  .links-container {
+    a {
+      i { color: $light-grey; }
+      &:hover, &:focus {
+        i { color:  $accent-color; }
+      }
+    }
+  }
+}

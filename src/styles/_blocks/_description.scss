@@ -1,3 +1,22 @@
 .description {
-  @include desktop { height: 550px; }
+  @include phone-only {
+    background: url("../img/rectangle-background.png") no-repeat 85% 0 fixed, transparent;
+  }
+  @include tablet {
+    background: url("../img/rectangle-background.png") no-repeat 105% -12% fixed, transparent;
+  }
+  @include desktop {
+    height: 550px;
+    background: url("../img/rectangle-background.png") no-repeat 141% -26% fixed, transparent;
+  }
+  @include largeDesktop {
+    background: url("../img/rectangle-background.png") no-repeat 395% 0 fixed, transparent;
+  }
+  @include extraLargeDesktop {
+    background: url("../img/rectangle-background.png") no-repeat -60em 12em fixed, transparent;
+  }
+  h5 {
+    background-color: white;
+    width: 110%;
+  }
 }
