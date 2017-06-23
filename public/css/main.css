@@ -9091,62 +9091,69 @@ header, section, footer {
   font-weight: 400;
   src: url("../fonts/Lato-Regular.ttf"); }
 
-body {
-  overflow-x: hidden; }
-  body * {
-    font-family: 'Exo', sans-serif;
-    color: #282828; }
-  body h1 {
-    font-size: 40px;
-    font-weight: 100; }
-    @media (min-width: 992px) {
-      body h1 {
-        font-size: 60px;
-        line-height: 1.25; } }
-  body h2 {
-    line-height: 50px;
-    font-size: 40px;
-    font-weight: 400; }
-    body h2 span {
-      color: #ff6d6d; }
-  body h4 {
-    line-height: 35px;
-    font-size: 22px;
-    font-weight: 400; }
-  body h5 {
-    font-size: 16px;
-    font-weight: 400;
-    color: #ff6d6d;
-    text-transform: uppercase; }
-  body .headings-wrapper {
-    margin-bottom: 3em; }
-  body p {
-    opacity: 0.66;
-    font-weight: 400; }
-  body .covered-right {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 300px 407px;
-    border-color: transparent transparent #ff6d6d transparent;
-    overflow: hidden; }
-  body .accent-button {
-    color: white;
-    background-color: #ff6d6d;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 100;
-    border: none; }
-    body .accent-button:hover {
-      background-color: #ffa0a0; }
-  body .tooltip {
-    background-color: transparent;
-    color: white; }
+body * {
+  font-family: 'Exo', sans-serif;
+  color: #282828; }
+
+body h1 {
+  font-size: 40px;
+  font-weight: 100; }
+  @media (min-width: 992px) {
+    body h1 {
+      font-size: 60px;
+      line-height: 1.25; } }
+
+body h2 {
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: 400; }
+  body h2 span {
+    color: #ff6d6d; }
+
+body h4 {
+  line-height: 35px;
+  font-size: 22px;
+  font-weight: 400; }
+
+body h5 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ff6d6d;
+  text-transform: uppercase; }
+
+body .headings-wrapper {
+  margin-bottom: 3em; }
+
+body p {
+  opacity: 0.66;
+  font-weight: 400; }
+
+body .covered-right {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 300px 407px;
+  border-color: transparent transparent #ff6d6d transparent;
+  overflow: hidden; }
+
+body .accent-button {
+  color: white;
+  background-color: #ff6d6d;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 100;
+  border: none; }
+  body .accent-button:hover {
+    background-color: #ffa0a0; }
+
+body .custom-tooltip + .tooltip.top .tooltip-inner, body .custom-tooltip + .tooltip.top .tooltip-arrow {
+  background-color: transparent;
+  color: white; }
 
 .icon-plane:before {
   content: url("../img/paper-plane.png"); }
 
-.icon-arrow:before, body .tooltip:before {
+.icon-arrow:before, body .custom-tooltip + .tooltip.top .tooltip-inner:before, body .custom-tooltip + .tooltip.top .tooltip-arrow:before {
   content: url("../img/arrow.png"); }
 
 .icon-google-plus:before {
@@ -9167,6 +9174,9 @@ header {
     header {
       height: 815px;
       padding: 12em 8em; } }
+  @media (min-width: 1200px) {
+    header {
+      padding: 17em 29em 0; } }
   header h1 {
     margin-bottom: 60px; }
   header p {
@@ -9335,6 +9345,8 @@ header {
   @media (min-width: 576px) {
     .trial .form-control {
       width: 22%; } }
+  .trial .accent-button {
+    color: white; }
   .trial .signing {
     font-weight: 100;
     color: white; }
@@ -9343,12 +9355,19 @@ header {
 
 footer {
   background: url("../img/rectangle-background.png") no-repeat 35em -25em fixed, transparent; }
-  @media (min-width: 576px) {
-    footer {
-      padding-bottom: 0; } }
   @media (max-width: 575px) {
     footer {
       text-align: center; } }
+  @media (min-width: 576px) {
+    footer {
+      padding-bottom: 0;
+      background: url("../img/rectangle-background.png") no-repeat 30em -20em fixed, transparent; } }
+  @media (min-width: 768px) {
+    footer {
+      background: url("../img/rectangle-background.png") no-repeat 40em -20em fixed, transparent; } }
+  @media (min-width: 992px) {
+    footer {
+      background: url("../img/rectangle-background.png") no-repeat 55em -20em fixed, transparent; } }
   footer a {
     line-height: 30px;
     opacity: 0.66;
@@ -9361,7 +9380,7 @@ footer {
     width: 45px;
     padding: 11px; }
   footer .links-container a i {
-    color: #dadada; }
+    color: #a9a9a9; }
   footer .links-container a:hover i, footer .links-container a:focus i {
     color: #ff6d6d; }
 
