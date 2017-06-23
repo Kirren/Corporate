@@ -11,6 +11,9 @@ header{
     height: 815px;
     padding: 12em 8em;
   }
+  @include extraLargeDesktop {
+    padding: 17em 29em 0;
+  }
   background: url("../img/header-background.png") no-repeat center center;
   background-size: cover;
   h1 { margin-bottom: 60px; }

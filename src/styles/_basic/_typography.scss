@@ -1,5 +1,4 @@
 body {
-  overflow-x: hidden;
   * {
     font-family: 'Exo', sans-serif;
     color: $black;
@@ -72,9 +71,11 @@ body {
     }
   }
 
-  .tooltip{
-    background-color: transparent;
-    color: white;
-    @extend .icon-arrow;
+  .custom-tooltip + .tooltip.top {
+    .tooltip-inner, .tooltip-arrow {
+      background-color: transparent;
+      color: white;
+      @extend .icon-arrow;
+    }
   }
 }

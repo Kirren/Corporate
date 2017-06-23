@@ -19,6 +19,7 @@
     @include phone-only { margin-bottom: 10px; }
     @include tablet { width: 22%; }
   }
+  .accent-button { color: white; }
   .signing {
     font-weight: 100;
     color: white;

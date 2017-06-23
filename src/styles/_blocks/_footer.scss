@@ -1,7 +1,12 @@
 footer {
-  @include tablet { padding-bottom: 0; }
-  @include phone-only { text-align: center; }
   background: url("../img/rectangle-background.png") no-repeat 35em -25em fixed, transparent;
+  @include phone-only { text-align: center; }
+  @include tablet {
+    padding-bottom: 0;
+    background: url("../img/rectangle-background.png") no-repeat 30em -20em fixed, transparent;
+  }
+  @include desktop { background: url("../img/rectangle-background.png") no-repeat 40em -20em fixed, transparent; }
+  @include largeDesktop { background: url("../img/rectangle-background.png") no-repeat 55em -20em fixed, transparent; }
   a {
     line-height: 30px;
     opacity: 0.66;
@@ -16,8 +21,6 @@ footer {
       @extend .mx-0;
       height: 45px;
     }
-    .form-group {
-    }
     .accent-button {
       width: 45px;
       padding: 11px;
@@ -25,7 +28,7 @@ footer {
   }
   .links-container {
     a {
-      i { color: $light-grey; }
+      i { color: $grey; }
       &:hover, &:focus {
         i { color:  $accent-color; }
       }
