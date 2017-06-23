@@ -1,3 +1,3 @@
 # Corporate
 
-https://kirren.github.io/Corporate/public
+Preview at: https://kirren.github.io/Corporate/public
